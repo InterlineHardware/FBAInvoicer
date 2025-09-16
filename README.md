@@ -20,7 +20,8 @@
    - **Order Status**: Remove `Cancelled` (remove cancelled orders).
 
 ## Step 4: Prepare and Run Script
-3. Define variables in your script:
+- Note: Latest version of spyreapi required. install with `pip install --upgrade spyreapi`
+1. Define variables in your script:
    - `EXCEL_FILE`
    - `SHEET_NAME`
    - `LOG_FILE`
@@ -28,8 +29,8 @@
    - `SPIRE_PASSWORD`
    - `SPIRE_COMPANY`
    - `SPIRE_HOST #spirehost:port`
-5. Run the script.
-6. From the filedused for running the script, copy the records into a **Master FBA Orders File**.
+2. Run the script.
+3. From the filedused for running the script, copy the records into a **Master FBA Orders File**.
    - This keeps track of all imported orders.
    - This file is also used for processing returns.
 
@@ -39,7 +40,7 @@
   - For monthly import (e.g. August), pick **08/01 to today**.
 - Note: Returns are dated by the **return request date**, and can include orders from prior months.
 
-## Step 5: Process Returns Report
+## Step 6: Process Returns Report
 1. Download the returns CSV file.
 2. Import into a new Excel Workbook.
 3. Merge with the **Master FBA Orders Sheet**.
