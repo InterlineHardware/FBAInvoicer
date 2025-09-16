@@ -2,7 +2,7 @@ from datetime import datetime
 from spyre.Models.sales_models import *
 from spyre.Models.shared_models import *
 import pandas as pd
-from spyre.spire import Spire
+from spyre.spire import Spire, SpireClient
 import logging
 from collections import defaultdict
 
@@ -189,7 +189,8 @@ records = df.to_dict(orient='records')
 logger = setup_logger()
 errors = []
 
-spire = Spire(company=SPIRE_COMPANY, username=SPIRE_USERNAME, password=SPIRE_PASSWORD, host=SPIRE_HOST)
+spire_client = SpireClient(company=SPIRE_COMPANY, username=SPIRE_USERNAME, password=SPIRE_PASSWORD, host=SPIRE_HOST, secure=False)
+spire = Spire(client=spire_client)
 
 sales_orders = build_sales_orders(records=records)
 
